@@ -1,0 +1,184 @@
+<style>
+    /* Variables de colores BioCongreso */
+    :root {
+        --biocongreso-primary-dark: #1a2332;
+        --biocongreso-primary-medium: #2a3f5f;
+        --biocongreso-accent: #FFC107;
+    }
+
+    .sobre-nosotros-section {
+        background: white;
+        padding: 80px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .sobre-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .sobre-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .sobre-header h1 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #1a2332;
+        margin-bottom: 20px;
+    }
+
+    .sobre-header .subtitle {
+        font-size: 20px;
+        color: #FFC107;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .sobre-content {
+        display: grid;
+        gap: 40px;
+    }
+
+    .content-block {
+        background: #f9fafb;
+        padding: 40px;
+        border-radius: 20px;
+        border-left: 5px solid #FFC107;
+    }
+
+    .content-block h2 {
+        color: #1a2332;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .content-block p {
+        color: #4b5563;
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+
+    .valores-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+    }
+
+    .valor-item {
+        text-align: center;
+        padding: 30px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+
+    .valor-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+    }
+
+    .valor-icon {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    .valor-title {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1a2332;
+        margin-bottom: 10px;
+    }
+
+    .valor-text {
+        font-size: 15px;
+        color: #6b7280;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .sobre-header h1 {
+            font-size: 36px;
+        }
+
+        .content-block {
+            padding: 30px 20px;
+        }
+
+        .valores-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<!-- Sección: Sobre Nosotros -->
+<section class="sobre-nosotros-section">
+    <div class="sobre-container">
+        <div class="sobre-header">
+            <div class="subtitle">🧬 Conoce BioCongreso</div>
+            <h1>Sobre Nosotros</h1>
+        </div>
+
+        <div class="sobre-content">
+            <div class="content-block">
+                <h2>¿Qué es BioCongreso?</h2>
+                <p>
+                    BioCongreso Internacional es el evento más importante de Biodesprogramación a nivel mundial.
+                    Desde nuestra primera edición, hemos reunido a miles de personas en busca de transformación,
+                    sanación y despertar de consciencia.
+                </p>
+                <p>
+                    Creado por el Instituto de Biodesprogramación de Fernando Sánchez, BioCongreso es un espacio
+                    único donde los mejores exponentes internacionales comparten sus conocimientos y experiencias
+                    para ayudarte a liberar patrones limitantes y alcanzar tu máximo potencial.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Nuestra Misión</h2>
+                <p>
+                    Facilitar espacios de transformación profunda donde las personas puedan:
+                </p>
+                <p>
+                    • Comprender el origen emocional de sus conflictos<br>
+                    • Liberar patrones transgeneracionales limitantes<br>
+                    • Sanar heridas emocionales del pasado<br>
+                    • Despertar a una nueva consciencia de vida<br>
+                    • Conectar con su verdadero propósito
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h2>Nuestros Valores</h2>
+                <div class="valores-grid">
+                    <div class="valor-item">
+                        <div class="valor-icon">🧠</div>
+                        <div class="valor-title">Transformación</div>
+                        <div class="valor-text">Facilitamos procesos de cambio profundo y duradero</div>
+                    </div>
+                    <div class="valor-item">
+                        <div class="valor-icon">💫</div>
+                        <div class="valor-title">Sanación</div>
+                        <div class="valor-text">Promovemos la sanación emocional y espiritual integral</div>
+                    </div>
+                    <div class="valor-item">
+                        <div class="valor-icon">🌟</div>
+                        <div class="valor-title">Consciencia</div>
+                        <div class="valor-text">Despertamos la consciencia para vivir en plenitud</div>
+                    </div>
+                    <div class="valor-item">
+                        <div class="valor-icon">🤝</div>
+                        <div class="valor-title">Comunidad</div>
+                        <div class="valor-text">Creamos una red de apoyo y crecimiento mutuo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

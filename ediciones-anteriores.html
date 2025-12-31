@@ -1,0 +1,257 @@
+<style>
+    /* Variables de colores BioCongreso */
+    :root {
+        --biocongreso-primary-dark: #1a2332;
+        --biocongreso-primary-medium: #2a3f5f;
+        --biocongreso-accent: #FFC107;
+    }
+
+    .ediciones-section {
+        background: white;
+        padding: 80px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .ediciones-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .ediciones-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .ediciones-header h1 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #1a2332;
+        margin-bottom: 20px;
+    }
+
+    .ediciones-header .subtitle {
+        font-size: 20px;
+        color: #FFC107;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .ediciones-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
+    .edicion-card {
+        background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+        border-radius: 20px;
+        padding: 40px;
+        color: white;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .edicion-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 5px;
+        background: #FFC107;
+    }
+
+    .edicion-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(255, 193, 7, 0.3);
+    }
+
+    .edicion-number {
+        font-size: 64px;
+        font-weight: 900;
+        color: #FFC107;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+
+    .edicion-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .edicion-info {
+        margin-bottom: 20px;
+    }
+
+    .info-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    .info-item i {
+        color: #FFC107;
+        font-size: 18px;
+    }
+
+    .edicion-description {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 15px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .edicion-badge {
+        display: inline-block;
+        background: rgba(255, 193, 7, 0.2);
+        color: #FFC107;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .ediciones-header h1 {
+            font-size: 36px;
+        }
+
+        .ediciones-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .edicion-number {
+            font-size: 48px;
+        }
+
+        .edicion-title {
+            font-size: 24px;
+        }
+    }
+</style>
+
+<!-- Sección: Ediciones Anteriores -->
+<section class="ediciones-section">
+    <div class="ediciones-container">
+        <div class="ediciones-header">
+            <div class="subtitle">📚 Nuestra Historia</div>
+            <h1>Ediciones Anteriores</h1>
+        </div>
+
+        <div class="ediciones-grid">
+            <!-- 5ta Edición -->
+            <div class="edicion-card">
+                <div class="edicion-number">5º</div>
+                <div class="edicion-title">Sanar Emocional</div>
+                <div class="edicion-info">
+                    <div class="info-item">
+                        <i>📅</i>
+                        <span>21-22 Noviembre 2025</span>
+                    </div>
+                    <div class="info-item">
+                        <i>📍</i>
+                        <span>Guadalajara, México</span>
+                    </div>
+                    <div class="info-item">
+                        <i>👥</i>
+                        <span>14 Conferencias</span>
+                    </div>
+                </div>
+                <div class="edicion-description">
+                    Un espacio único para profundizar en las heridas que bloquean tu bienestar y encontrar
+                    el camino hacia la liberación definitiva. Con ponentes de talla internacional como
+                    César Lozano, Fernando Sánchez, y más.
+                </div>
+                <div class="edicion-badge">Última Edición</div>
+            </div>
+
+            <!-- 4ta Edición -->
+            <div class="edicion-card">
+                <div class="edicion-number">4º</div>
+                <div class="edicion-title">BioCongreso 2024</div>
+                <div class="edicion-info">
+                    <div class="info-item">
+                        <i>📅</i>
+                        <span>2024</span>
+                    </div>
+                    <div class="info-item">
+                        <i>📍</i>
+                        <span>Guadalajara, México</span>
+                    </div>
+                </div>
+                <div class="edicion-description">
+                    Continuamos expandiendo el conocimiento de la Biodesprogramación con expertos
+                    internacionales y miles de participantes en busca de transformación.
+                </div>
+            </div>
+
+            <!-- 3ra Edición -->
+            <div class="edicion-card">
+                <div class="edicion-number">3º</div>
+                <div class="edicion-title">BioCongreso 2023</div>
+                <div class="edicion-info">
+                    <div class="info-item">
+                        <i>📅</i>
+                        <span>2023</span>
+                    </div>
+                    <div class="info-item">
+                        <i>📍</i>
+                        <span>Guadalajara, México</span>
+                    </div>
+                </div>
+                <div class="edicion-description">
+                    Un evento que marcó un hito en la comunidad de Biodesprogramación,
+                    reuniendo a miles de personas en su proceso de sanación.
+                </div>
+            </div>
+
+            <!-- 2da Edición -->
+            <div class="edicion-card">
+                <div class="edicion-number">2º</div>
+                <div class="edicion-title">BioCongreso 2022</div>
+                <div class="edicion-info">
+                    <div class="info-item">
+                        <i>📅</i>
+                        <span>2022</span>
+                    </div>
+                    <div class="info-item">
+                        <i>📍</i>
+                        <span>Guadalajara, México</span>
+                    </div>
+                </div>
+                <div class="edicion-description">
+                    La segunda edición consolidó a BioCongreso como el evento referente
+                    de Biodesprogramación en América Latina.
+                </div>
+            </div>
+
+            <!-- 1ra Edición -->
+            <div class="edicion-card">
+                <div class="edicion-number">1º</div>
+                <div class="edicion-title">BioCongreso 2021</div>
+                <div class="edicion-info">
+                    <div class="info-item">
+                        <i>📅</i>
+                        <span>2021</span>
+                    </div>
+                    <div class="info-item">
+                        <i>📍</i>
+                        <span>Guadalajara, México</span>
+                    </div>
+                </div>
+                <div class="edicion-description">
+                    El inicio de una gran historia. La primera edición que dio vida al
+                    evento más importante de Biodesprogramación.
+                </div>
+                <div class="edicion-badge">Primera Edición</div>
+            </div>
+        </div>
+    </div>
+</section>

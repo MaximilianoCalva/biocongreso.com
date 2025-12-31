@@ -1,0 +1,234 @@
+<style>
+    /* Variables de colores BioCongreso */
+    :root {
+        --biocongreso-primary-dark: #1a2332;
+        --biocongreso-primary-medium: #2a3f5f;
+        --biocongreso-accent: #FFC107;
+    }
+
+    .contacto-section {
+        background: white;
+        padding: 80px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .contacto-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .contacto-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .contacto-header h1 {
+        font-size: 48px;
+        font-weight: 900;
+        color: #1a2332;
+        margin-bottom: 20px;
+    }
+
+    .contacto-header .subtitle {
+        font-size: 20px;
+        color: #FFC107;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .contacto-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+
+    .contacto-card {
+        background: #f9fafb;
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .contacto-card:hover {
+        border-color: #FFC107;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(255, 193, 7, 0.2);
+    }
+
+    .contacto-icon {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
+    .contacto-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a2332;
+        margin-bottom: 15px;
+    }
+
+    .contacto-info {
+        font-size: 16px;
+        color: #4b5563;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .contacto-link {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .contacto-link:hover {
+        background: #FFC107;
+        color: #1a2332;
+        transform: scale(1.05);
+    }
+
+    .whatsapp-card {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        color: white;
+        grid-column: 1 / -1;
+    }
+
+    .whatsapp-card .contacto-title,
+    .whatsapp-card .contacto-info {
+        color: white;
+    }
+
+    .whatsapp-card .contacto-link {
+        background: white;
+        color: #25D366;
+    }
+
+    .whatsapp-card .contacto-link:hover {
+        background: #FFD54F;
+        color: #1a2332;
+    }
+
+    .mapa-section {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    .mapa-section h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #1a2332;
+        margin-bottom: 30px;
+    }
+
+    .mapa-placeholder {
+        background: #f9fafb;
+        border-radius: 20px;
+        padding: 60px;
+        border: 2px dashed #e5e7eb;
+    }
+
+    .mapa-placeholder p {
+        color: #6b7280;
+        font-size: 16px;
+    }
+
+    @media (max-width: 768px) {
+        .contacto-header h1 {
+            font-size: 36px;
+        }
+
+        .contacto-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .whatsapp-card {
+            grid-column: 1;
+        }
+    }
+</style>
+
+<!-- Sección: Contacto -->
+<section class="contacto-section">
+    <div class="contacto-container">
+        <div class="contacto-header">
+            <div class="subtitle">💬 Estamos Aquí</div>
+            <h1>Contacto</h1>
+        </div>
+
+        <div class="contacto-grid">
+            <!-- Email -->
+            <div class="contacto-card">
+                <div class="contacto-icon">📧</div>
+                <div class="contacto-title">Correo Electrónico</div>
+                <div class="contacto-info">
+                    Envíanos un correo y te responderemos a la brevedad
+                </div>
+                <a href="mailto:info@biocongreso.com" class="contacto-link">
+                    info@biocongreso.com
+                </a>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="contacto-card">
+                <div class="contacto-icon">📱</div>
+                <div class="contacto-title">Teléfono</div>
+                <div class="contacto-info">
+                    Llámanos de lunes a viernes<br>9:00 AM - 6:00 PM
+                </div>
+                <a href="tel:+5213334054655" class="contacto-link">
+                    +52 333 405 4655
+                </a>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="contacto-card">
+                <div class="contacto-icon">🌐</div>
+                <div class="contacto-title">Redes Sociales</div>
+                <div class="contacto-info">
+                    Síguenos en nuestras redes sociales
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center; margin-top: 15px;">
+                    <a href="https://facebook.com/biocongreso" target="_blank"
+                        style="font-size: 32px; text-decoration: none;">📘</a>
+                    <a href="https://instagram.com/biocongreso" target="_blank"
+                        style="font-size: 32px; text-decoration: none;">📷</a>
+                    <a href="https://youtube.com/biocongreso" target="_blank"
+                        style="font-size: 32px; text-decoration: none;">📺</a>
+                </div>
+            </div>
+
+            <!-- WhatsApp Comunidad -->
+            <div class="contacto-card whatsapp-card">
+                <div class="contacto-icon">💬</div>
+                <div class="contacto-title">Canal de WhatsApp</div>
+                <div class="contacto-info">
+                    Únete a nuestra comunidad de WhatsApp para recibir avisos importantes,<br>
+                    actualizaciones del evento y conectar con otros participantes
+                </div>
+                <a href="https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F" target="_blank" class="contacto-link">
+                    Unirse al Canal
+                </a>
+            </div>
+        </div>
+
+        <!-- Ubicación -->
+        <div class="mapa-section">
+            <h2>📍 Nuestra Ubicación</h2>
+            <div class="mapa-placeholder">
+                <p><strong>Instituto de Biodesprogramación</strong></p>
+                <p>Guadalajara, Jalisco, México</p>
+                <p style="margin-top: 20px; color: #9ca3af; font-size: 14px;">
+                    [Aquí puedes insertar un mapa de Google Maps con el código embed]
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

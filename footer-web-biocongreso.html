@@ -1,0 +1,284 @@
+<style>
+    /* Variables de colores BioCongreso */
+    :root {
+        --biocongreso-primary-dark: #1a2332;
+        --biocongreso-primary-medium: #2a3f5f;
+        --biocongreso-accent: #FFC107;
+        --biocongreso-white: #FFFFFF;
+    }
+
+    /* Reset */
+    .biocongreso-footer * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Footer Principal */
+    .biocongreso-footer {
+        background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+        color: white;
+        padding: 60px 20px 30px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* Sección del footer */
+    .footer-section h3 {
+        color: #FFC107;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-section p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 15px;
+    }
+
+    /* Logo en footer */
+    .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo-icon {
+        font-size: 40px;
+        filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.3));
+    }
+
+    .footer-logo-text {
+        font-size: 28px;
+        font-weight: 900;
+        color: white;
+    }
+
+    /* Links del footer */
+    .footer-links {
+        list-style: none;
+    }
+
+    .footer-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        font-size: 15px;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .footer-links a:hover {
+        color: #FFC107;
+        transform: translateX(5px);
+    }
+
+    /* Redes sociales */
+    .social-links {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .social-link {
+        width: 45px;
+        height: 45px;
+        background: rgba(255, 193, 7, 0.1);
+        border: 2px solid rgba(255, 193, 7, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFC107;
+        font-size: 20px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+        background: #FFC107;
+        color: #1a2332;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+    }
+
+    /* Información de contacto */
+    .contact-info {
+        list-style: none;
+    }
+
+    .contact-info li {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 12px;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-info i {
+        color: #FFC107;
+        font-size: 18px;
+    }
+
+    /* Divider */
+    .footer-divider {
+        height: 1px;
+        background: rgba(255, 193, 7, 0.2);
+        margin: 30px 0;
+    }
+
+    /* Footer bottom */
+    .footer-bottom {
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 14px;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom a {
+        color: #FFC107;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .biocongreso-footer {
+            padding: 40px 20px 20px;
+        }
+
+        .footer-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+        }
+
+        .social-links {
+            justify-content: center;
+        }
+    }
+</style>
+
+<!-- Footer BioCongreso -->
+<footer class="biocongreso-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <!-- Sección: Sobre BioCongreso -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon">🧬</div>
+                    <div class="footer-logo-text">BioCongreso</div>
+                </div>
+                <p>
+                    El evento más importante de Biodesprogramación a nivel internacional.
+                    Un espacio de transformación, sanación y despertar de consciencia.
+                </p>
+                <div class="social-links">
+                    <a href="https://facebook.com/biocongreso" class="social-link" target="_blank" title="Facebook">
+                        📘
+                    </a>
+                    <a href="https://instagram.com/biocongreso" class="social-link" target="_blank" title="Instagram">
+                        📷
+                    </a>
+                    <a href="https://youtube.com/biocongreso" class="social-link" target="_blank" title="YouTube">
+                        📺
+                    </a>
+                    <a href="https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F" class="social-link" target="_blank"
+                        title="WhatsApp">
+                        💬
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección: Enlaces Rápidos -->
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="https://biocongreso.com">Inicio</a></li>
+                    <li><a href="https://biocongreso.com/sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="https://biocongreso.com/ediciones-anteriores">Ediciones Anteriores</a></li>
+                    <li><a href="https://biocongreso.com/ponentes">Ponentes</a></li>
+                    <li><a href="https://biocongreso.com/contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección: Acceso -->
+            <div class="footer-section">
+                <h3>Acceso</h3>
+                <ul class="footer-links">
+                    <li><a href="https://panel.biocongreso.com">Panel de Usuario</a></li>
+                    <li><a href="https://panel.biocongreso.com/registro">Registrarse</a></li>
+                    <li><a href="https://panel.biocongreso.com">Iniciar Sesión</a></li>
+                    <li><a href="https://panel.biocongreso.com/usuario">Mi Dashboard</a></li>
+                </ul>
+            </div>
+
+            <!-- Sección: Contacto -->
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i>📧</i>
+                        <span>info@biocongreso.com</span>
+                    </li>
+                    <li>
+                        <i>📱</i>
+                        <span>+52 333 405 4655</span>
+                    </li>
+                    <li>
+                        <i>🌐</i>
+                        <span>www.biocongreso.com</span>
+                    </li>
+                    <li>
+                        <i>💬</i>
+                        <a href="https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F" target="_blank"
+                            style="color: rgba(255, 255, 255, 0.8);">
+                            Canal de WhatsApp
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Elementor Template Section -->
+        [elementor-template id="625"]
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 BioCongreso Internacional. Todos los derechos reservados.</p>
+            <p>
+                Desarrollado con 💛 por
+                <a href="https://fernandosanchezinstituto.com.mx" target="_blank">Instituto de Biodesprogramación</a>
+            </p>
+        </div>
+    </div>
+</footer>

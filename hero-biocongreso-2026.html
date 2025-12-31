@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .biocongreso-2026-section {
+            background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
+            padding: 80px 20px;
+            margin: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .biocongreso-2026-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .biocongreso-2026-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 193, 7, 0.08);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .biocongreso-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .biocongreso-subtitle {
+            color: #FFC107;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .biocongreso-title {
+            color: white;
+            font-size: 56px;
+            font-weight: 900;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .biocongreso-year {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
+            padding: 12px 40px;
+            border-radius: 50px;
+            font-size: 64px;
+            font-weight: 900;
+            color: #1a2332;
+            margin: 25px 0;
+            box-shadow: 0 8px 30px rgba(255, 193, 7, 0.4);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .event-card {
+            background: rgba(255, 193, 7, 0.1);
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 193, 7, 0.15);
+            box-shadow: 0 10px 30px rgba(255, 193, 7, 0.3);
+        }
+
+        .event-number {
+            color: #FFC107;
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .event-location {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .event-date {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            font-weight: 600;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .event-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .biocongreso-message {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 20px;
+            margin: 30px 0;
+            font-weight: 400;
+            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .biocongreso-divider {
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, #FFC107, transparent);
+            margin: 35px auto;
+            border-radius: 2px;
+        }
+
+        .biocongreso-details {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .detail-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 16px;
+            min-width: 140px;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255, 193, 7, 0.2);
+        }
+
+        .detail-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 193, 7, 0.15);
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+        }
+
+        .detail-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+            filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.3));
+        }
+
+        .detail-text {
+            color: white;
+            font-size: 17px;
+            font-weight: 700;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 16px 40px;
+            background: #FFC107;
+            color: #1a2332;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .cta-button:hover {
+            background: #FFD54F;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 193, 7, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .biocongreso-2026-section {
+                padding: 50px 20px;
+            }
+
+            .biocongreso-title {
+                font-size: 36px;
+            }
+
+            .biocongreso-year {
+                font-size: 48px;
+                padding: 10px 30px;
+            }
+
+            .events-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .event-number {
+                font-size: 36px;
+            }
+
+            .event-location {
+                font-size: 20px;
+            }
+
+            .event-date {
+                font-size: 16px;
+            }
+
+            .biocongreso-message {
+                font-size: 17px;
+            }
+
+            .biocongreso-details {
+                gap: 30px;
+            }
+
+            .detail-item {
+                min-width: 120px;
+                padding: 16px;
+            }
+
+            .detail-icon {
+                font-size: 32px;
+            }
+
+            .detail-text {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="biocongreso-2026-section">
+        <div class="biocongreso-content">
+            <div class="biocongreso-subtitle">🧬 Nos vemos pronto en</div>
+
+            <h1 class="biocongreso-title">
+                BioCongreso<br>Internacional
+            </h1>
+
+            <div class="biocongreso-year">2026</div>
+
+            <div class="biocongreso-divider"></div>
+
+            <!-- Eventos 2026 -->
+            <div class="events-container">
+                <!-- 6to BioCongreso -->
+                <div class="event-card">
+                    <div class="event-icon">🇨🇴</div>
+                    <div class="event-number">6º BioCongreso</div>
+                    <div class="event-location">Bogotá, Colombia</div>
+                    <div class="event-date">📅 Sábado 30 Mayo 2026</div>
+                </div>
+
+                <!-- 7mo BioCongreso -->
+                <div class="event-card">
+                    <div class="event-icon">🇲🇽</div>
+                    <div class="event-number">7º BioCongreso</div>
+                    <div class="event-location">Guadalajara, México</div>
+                    <div class="event-date">📅 Sábado 21 Noviembre 2026</div>
+                </div>
+            </div>
+
+            <p class="biocongreso-message">
+                Únete a nosotros en las próximas ediciones del evento más importante de Biodesprogramación.<br>
+                Un espacio de transformación, sanación y despertar de consciencia.
+            </p>
+
+            <div class="biocongreso-details">
+                <div class="detail-item">
+                    <div class="detail-icon">🧠</div>
+                    <div class="detail-text">Transformación</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">💫</div>
+                    <div class="detail-text">Sanación</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-icon">🌟</div>
+                    <div class="detail-text">Consciencia</div>
+                </div>
+            </div>
+
+            <a href="https://panel.biocongreso.com/" class="cta-button">
+                Mantente Informado
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
