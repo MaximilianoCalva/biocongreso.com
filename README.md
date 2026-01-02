@@ -1,5 +1,8 @@
 # BioCongreso.com 🧬
 
+**Versión**: 1.0.2  
+**Última actualización**: Enero 2026
+
 Sitio web oficial de BioCongreso Internacional - El evento más importante de Biodesprogramación a nivel mundial.
 
 ## 🎨 Colores Institucionales
@@ -118,8 +121,8 @@ Histórico de todas las ediciones de BioCongreso.
 Página de contacto con múltiples canales de comunicación.
 
 **Contenido:**
-- 📧 **Email**: info@biocongreso.com
-- 📱 **Teléfono**: +52 333 405 4655
+- 📧 **Email**: contacto@biocongreso.com
+- 📱 **Teléfono**: +52 1 33 2603 4759
 - 🌐 **Redes Sociales**: Facebook, Instagram, YouTube
 - 💬 **Canal WhatsApp**: Comunidad BioCongreso
 - 📍 **Ubicación**: Guadalajara, Jalisco, México
@@ -151,8 +154,42 @@ Página de contacto con múltiples canales de comunicación.
 - **WhatsApp Canal**: https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F
 
 ### Soporte
-- **WhatsApp**: https://wa.me/5213334054655
-- **Email**: info@biocongreso.com
+- **WhatsApp**: https://wa.me/5213326034759
+- **Email**: contacto@biocongreso.com
+
+---
+
+## 🛠️ Plataforma y Tecnología
+
+### Stack Tecnológico
+- **CMS**: WordPress
+- **Constructor**: Elementor Pro
+- **Hosting**: https://biocongreso.com
+
+### Implementación de Componentes HTML
+
+Todos los componentes HTML de este proyecto están diseñados para ser implementados en **Elementor** usando el widget HTML.
+
+#### Cómo Usar en Elementor:
+
+1. **Editar Página/Template**
+   - Ir a la página que deseas editar
+   - Abrir con Elementor
+
+2. **Agregar Widget HTML**
+   - Buscar "HTML" en el panel de widgets de Elementor
+   - Arrastrar el widget a la sección deseada
+
+3. **Copiar y Pegar Código**
+   - Abrir el archivo HTML del componente
+   - Copiar TODO el contenido (incluyendo `<style>` y `<script>`)
+   - Pegar en el widget HTML de Elementor
+
+4. **Guardar y Publicar**
+   - Guardar cambios en Elementor
+   - Publicar la página
+
+---
 
 ## 📝 Uso en WordPress/Elementor
 
@@ -266,8 +303,8 @@ En `footer-web-biocongreso.html` y `contacto.html`:
 
 En `contacto.html`:
 ```html
-<a href="mailto:info@biocongreso.com">Email</a>
-<a href="tel:+5213334054655">Teléfono</a>
+<a href="mailto:contacto@biocongreso.com">Email</a>
+<a href="tel:+5213326034759">Teléfono</a>
 ```
 
 ### Cambiar Shortcode de Elementor
@@ -280,8 +317,8 @@ En `footer-web-biocongreso.html`:
 ## 📞 Soporte
 
 Para soporte técnico o consultas:
-- **Email**: info@biocongreso.com
-- **WhatsApp**: +52 333 405 4655
+- **Email**: contacto@biocongreso.com
+- **WhatsApp**: +52 1 33 2603 4759
 - **Canal WhatsApp**: https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F
 
 ---
