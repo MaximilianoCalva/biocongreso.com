@@ -1,6 +1,6 @@
 # BioCongreso.com 🧬
 
-**Versión**: 1.0.2  
+**Versión**: 1.1.0  
 **Última actualización**: Enero 2026
 
 Sitio web oficial de BioCongreso Internacional - El evento más importante de Biodesprogramación a nivel mundial.
