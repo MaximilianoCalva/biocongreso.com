@@ -17,11 +17,12 @@
     /* Header Principal */
     .biocongreso-header {
         background: linear-gradient(135deg, #1a2332 0%, #2a3f5f 100%);
-        padding: 20px 0;
+        padding: 15px 0;
         box-shadow: 0 4px 20px rgba(26, 35, 50, 0.2);
         position: sticky;
         top: 0;
         z-index: 1000;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     .header-container {
@@ -42,20 +43,19 @@
     }
 
     .logo-icon {
-        font-size: 32px;
+        font-size: 28px;
         filter: drop-shadow(0 2px 8px rgba(255, 193, 7, 0.3));
     }
 
     .logo-text {
         color: white;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 900;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
 
     .logo-subtitle {
         color: #FFC107;
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -64,44 +64,23 @@
     /* Navegación */
     .header-nav {
         display: flex;
-        gap: 30px;
+        gap: 25px;
         align-items: center;
     }
 
     .nav-link {
         color: rgba(255, 255, 255, 0.9);
         text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 15px;
+        font-weight: 500;
         transition: all 0.3s ease;
-        padding: 8px 16px;
-        border-radius: 8px;
+        padding: 8px 12px;
+        border-radius: 6px;
     }
 
     .nav-link:hover {
         color: #FFC107;
         background: rgba(255, 193, 7, 0.1);
-    }
-
-    /* Botón CTA */
-    .header-cta {
-        background: #FFC107;
-        color: #1a2332;
-        padding: 12px 28px;
-        border-radius: 50px;
-        font-size: 15px;
-        font-weight: 700;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    }
-
-    .header-cta:hover {
-        background: #FFD54F;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(255, 193, 7, 0.4);
     }
 
     /* Menú móvil */
@@ -110,57 +89,79 @@
         background: none;
         border: none;
         color: white;
-        font-size: 28px;
+        font-size: 24px;
         cursor: pointer;
-        padding: 8px;
+        padding: 5px;
+        z-index: 1002;
     }
 
-    /* Responsive */
-    @media (max-width: 768px) {
-        .header-nav {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #1a2332;
-            flex-direction: column;
-            padding: 20px;
-            gap: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+    /* Overlay */
+    .mobile-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1001;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
 
-        .header-nav.active {
-            display: flex;
-        }
+    .mobile-overlay.active {
+        display: block;
+        opacity: 1;
+    }
 
+    /* Responsive 1024px */
+    @media (max-width: 1024px) {
         .mobile-menu-toggle {
             display: block;
         }
 
-        .logo-text {
-            font-size: 24px;
+        .header-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #1a2332;
+            flex-direction: column;
+            padding: 80px 20px 20px;
+            gap: 10px;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            align-items: stretch;
+            z-index: 1002;
+            overflow-y: auto;
         }
 
-        .logo-icon {
-            font-size: 28px;
+        .header-nav.active {
+            right: 0;
         }
 
         .nav-link {
-            width: 100%;
-            text-align: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 16px;
         }
 
-        .header-cta {
-            width: 100%;
-            text-align: center;
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: #FFC107;
+            padding-left: 20px;
         }
     }
 </style>
 
+<!-- Overlay para móvil -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
 <!-- Header BioCongreso -->
 <header class="biocongreso-header">
     <div class="header-container">
+        <!-- Logo -->
         <a href="https://biocongreso.com" class="header-logo">
             <div class="logo-icon">🧬</div>
             <div>
@@ -169,29 +170,68 @@
             </div>
         </a>
 
+        <!-- Botón Hamburguesa -->
+        <button class="mobile-menu-toggle" id="mobileToggle" aria-label="Menu">
+            ☰
+        </button>
+
+        <!-- Navegación -->
         <nav class="header-nav" id="headerNav">
             <a href="https://biocongreso.com" class="nav-link">Inicio</a>
             <a href="https://biocongreso.com/sobre-nosotros" class="nav-link">Sobre Nosotros</a>
             <a href="https://biocongreso.com/ediciones-anteriores" class="nav-link">Ediciones</a>
             <a href="https://biocongreso.com/contacto" class="nav-link">Contacto</a>
         </nav>
-
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
-            ☰
-        </button>
     </div>
 </header>
 
 <script>
-    function toggleMobileMenu() {
-        const nav = document.getElementById('headerNav');
-        nav.classList.toggle('active');
+    // Variables
+    const mobileToggle = document.getElementById('mobileToggle');
+    const headerNav = document.getElementById('headerNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Toggle Menu
+    function toggleMenu() {
+        const isActive = headerNav.classList.contains('active');
+        if (isActive) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     }
 
-    // Cerrar menú al hacer click en un link
-    document.querySelectorAll('.nav-link, .header-cta').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById('headerNav').classList.remove('active');
-        });
+    function openMenu() {
+        headerNav.classList.add('active');
+        mobileOverlay.classList.add('active');
+        mobileToggle.innerHTML = '✕'; // Cambiar icono a X
+    }
+
+    function closeMenu() {
+        headerNav.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        mobileToggle.innerHTML = '☰'; // Volver a hamburguesa
+    }
+
+    // Event Listeners
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', closeMenu);
+
+    // Cerrar al clickear enlaces
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // Cerrar con tecla ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    // Reset en resize > 1024px
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1024) {
+            closeMenu();
+        }
     });
 </script>

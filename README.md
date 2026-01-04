@@ -3,6 +3,10 @@
 **Versión**: 1.1.0  
 **Última actualización**: Enero 2026
 
+## SEO y Metadata
+**Título del Sitio:** BioCongreso Internacional - El Evento Líder en Biodesprogramación
+**Descripción Corta:** Sitio oficial de BioCongreso. Descubre nuestros eventos en México y Colombia, conferencias de salud holística y talleres de transformación personal.
+
 Sitio web oficial de BioCongreso Internacional - El evento más importante de Biodesprogramación a nivel mundial.
 
 ## 🎨 Colores Institucionales
