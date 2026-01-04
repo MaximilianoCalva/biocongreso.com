@@ -155,10 +155,11 @@ Página de contacto con múltiples canales de comunicación.
 - **Facebook**: https://facebook.com/biocongreso
 - **Instagram**: https://instagram.com/biocongreso
 - **YouTube**: https://youtube.com/biocongreso
-- **WhatsApp Canal**: https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F
+- **WhatsApp**: https://wa.me/5213334054655
+- **Canal WhatsApp**: https://whatsapp.com/channel/0029VbB4sIw9mrGZcf6T0Z0F
 
 ### Soporte
-- **WhatsApp**: https://wa.me/5213326034759
+- **WhatsApp**: https://wa.me/5213334054655
 - **Email**: contacto@biocongreso.com
 
 ---

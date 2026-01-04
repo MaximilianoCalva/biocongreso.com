@@ -46,3 +46,13 @@ wp-config-local.php
 test/
 tests/
 *.test.html
+
+# Sensitive Data
+*.pem
+*.key
+*.p12
+*.crt
+creds.json
+config.js
+secrets.js
+private_key
